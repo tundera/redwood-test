@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 
-import Navbar from 'src/components/Navbar/Navbar'
+import Navbar from 'src/components/Header'
 
 type PlayersLayout = {
   children?: React.ReactNode

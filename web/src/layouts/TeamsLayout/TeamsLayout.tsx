@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 
-import Navbar from 'src/components/Navbar/Navbar'
+import Header from 'src/components/Header'
 
 type TeamsLayout = {
   children?: React.ReactNode
@@ -9,7 +9,7 @@ type TeamsLayout = {
 const TeamsLayout = ({ children }: TeamsLayout) => {
   return (
     <div className="flex flex-col items-center min-h-screen w-screen">
-      <Navbar />
+      <Header />
 
       <AnimatePresence>
         <motion.main

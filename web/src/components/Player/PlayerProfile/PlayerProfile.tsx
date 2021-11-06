@@ -13,7 +13,14 @@ const PlayerProfile = ({ player }: PlayerProfileProps) => {
   )
 
   return (
-    <div className="flex flex-col items-center px-8 py-8 bg-gray-200 dark:bg-800 shadow-2xl space-y-8 w-144">
+    <div className="flex flex-col items-center px-8 py-8 bg-gray-200 dark:bg-800 shadow-2xl space-y-8 w-full md:w-144">
+      <div className="pt-2">
+        <img
+          src={headshot}
+          alt="Player headshot"
+          className="object-cover w-96 h-96"
+        />
+      </div>
       <hgroup className="space-y-4 my-8 text-center">
         <h1 className="text-2xl md:text-4xl font-bold tracking-wide">
           {player.name}
@@ -22,22 +29,22 @@ const PlayerProfile = ({ player }: PlayerProfileProps) => {
           #{player.number} | {player.position}
         </h2>
       </hgroup>
-      <div className="pt-2">
-        <img
-          src={headshot}
-          alt="Player headshot"
-          className="object-cover w-96 h-96"
-        />
-      </div>
       <Link
         to={routes.team({ id: player.team.id })}
         className="text-lg font-semibold tracking-tight hover:font-bold"
       >
         {player.team.city} {player.team.name}
       </Link>
-      <p>
-        {player.height} / {player.weight} lbs
-      </p>
+      <div className="flex flex-col space-y-2 w-32">
+        <p className="inline-flex justify-between">
+          <span className="italic">Height:</span>
+          <span>{player.height}</span>
+        </p>
+        <p className="inline-flex justify-between">
+          <span className="italic">Weight:</span>
+          <span>{player.weight}</span>
+        </p>
+      </div>
     </div>
   )
 }

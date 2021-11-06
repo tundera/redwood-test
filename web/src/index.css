@@ -11,3 +11,11 @@
 /**
  * END --- TAILWIND GENERATOR EDIT
  */
+
+body {
+  @apply bg-gray-800;
+}
+
+#redwood-app {
+  @apply text-black dark:text-white bg-white dark:bg-black;
+}
