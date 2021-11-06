@@ -8,13 +8,13 @@ type PlayersLayout = {
 
 const PlayersLayout = ({ children }: PlayersLayout) => {
   return (
-    <div className="flex flex-col items-center min-h-screen w-screen">
+    <div className="flex flex-col items-center w-screen min-h-screen">
       <Navbar />
 
       <AnimatePresence exitBeforeEnter>
         <motion.main
           key="main"
-          className="flex flex-col flex-grow items-center justify-center my-32 mx-auto text-black bg-white dark:text-white dark:bg-black"
+          className="flex flex-col items-center justify-center flex-grow mx-auto my-32 text-black bg-white dark:text-white dark:bg-black"
           animate="enter"
           exit="exit"
           initial="initial"

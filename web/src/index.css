@@ -12,10 +12,14 @@
  * END --- TAILWIND GENERATOR EDIT
  */
 
+html {
+  @apply h-full bg-gray-800;
+}
+
 body {
-  @apply bg-gray-800;
+  @apply h-full;
 }
 
 #redwood-app {
-  @apply text-black dark:text-white bg-white dark:bg-black;
+  @apply text-black bg-white dark:text-white dark:bg-black;
 }

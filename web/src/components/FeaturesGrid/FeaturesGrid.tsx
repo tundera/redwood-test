@@ -1,50 +1,40 @@
-import {
-  CloudUploadIcon,
-  CogIcon,
-  LockClosedIcon,
-  RefreshIcon,
-  ServerIcon,
-  ShieldCheckIcon,
-} from '@heroicons/react/outline'
-
 const features = [
-  { name: 'Prisma', icon: '/logos/prisma.svg' },
-  { name: 'GraphQL', icon: '/logos/graphql.svg' },
-  { name: 'TypeScript', icon: '/logos/typescript.svg' },
-  { name: 'Vercel', icon: '/logos/vercel.svg' },
+  { name: 'Prisma', icon: '/logos/prisma.svg', description: '' },
+  { name: 'GraphQL', icon: '/logos/graphql.svg', description: '' },
+  { name: 'TypeScript', icon: '/logos/typescript.svg', description: '' },
 ]
 
 const FeaturesGrid = () => {
   return (
-    <div className="relative bg-white py-16 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+    <div className="relative py-16 bg-white sm:py-24 lg:py-32">
+      <div className="max-w-md px-4 mx-auto text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
         <h2 className="text-base font-semibold tracking-wider text-indigo-600 uppercase">
-          Deploy faster
+          Development reimagined
         </h2>
-        <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-          Everything you need to deploy your app
+        <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          A React framework that packs a serious punch.
         </p>
-        <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-          Phasellus lorem quam molestie id quisque diam aenean nulla in.
-          Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend
-          condimentum id viverra nulla.
+        <p className="mx-auto mt-5 text-xl text-gray-500 max-w-prose">
+          Everything you need to develop, test, and deploy your applications. No
+          configuration required. Code, design, and documentation in one place.
         </p>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <div key={feature.name} className="pt-6">
-                <div className="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+                <div className="flow-root px-6 pb-8 rounded-lg bg-gray-50">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 bg-indigo-500 rounded-md shadow-lg">
+                      <span className="inline-flex items-center justify-center p-3 rounded-md md:shadow-lg md:bg-white">
                         <img
                           src={feature.icon}
-                          className="h-6 w-6 text-white"
+                          className="w-24 h-24 text-white"
                           aria-hidden="true"
+                          alt={`${feature.name} logo`}
                         />
                       </span>
                     </div>
-                    <h3 className="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                    <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">
                       {feature.name}
                     </h3>
                     <p className="mt-5 text-base text-gray-500">

@@ -20,25 +20,25 @@ const PlayerCard = ({ player }: PlayerCardProps) => {
     <motion.article
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="flex flex-col justify-end bg-white dark:bg-gray-900 shadow-2xl w-80 h-48 relative"
+      className="relative flex flex-col justify-end h-48 bg-white shadow-2xl dark:bg-gray-900 w-80"
     >
       <img
         src={logo}
         alt="Team logo"
-        className="opacity-10 -translate-x-4 object-cover absolute w-full h-full"
+        className="absolute object-cover w-full h-full opacity-10 -translate-x-4"
       />
       <div className="pt-2">
-        <div className="flex items-end justify-evenly mx-4">
+        <div className="flex items-end mx-4 justify-evenly">
           <img
             src={headshot}
             alt="Player headshot"
-            className="object-cover w-32 h-32 relative"
+            className="relative object-cover w-32 h-32"
           />
           <div className="ml-2">
-            <p className="text-sm md:text-md font-medium w-full text-gray-500 dark:text-gray-400 tracking-tight">
+            <p className="w-full text-sm font-medium tracking-tight text-gray-500 md:text-md dark:text-gray-400">
               #{player.number} | {player.position}
             </p>
-            <p className="text-md md:text-lg font-medium mb-6 sm:mb-10 w-full text-gray-900 dark:text-gray-100 tracking-tight">
+            <p className="w-full mb-6 font-medium tracking-tight text-gray-900 text-md md:text-lg sm:mb-10 dark:text-gray-100">
               {player.name}
             </p>
           </div>
@@ -56,20 +56,20 @@ const PlayerCard = ({ player }: PlayerCardProps) => {
         </div>
       </div>
       <div
-        className="grid grid-cols-3 divide-x-2 divide-black text-gray-800 dark:text-gray-200 border-t-4"
+        className="text-gray-800 border-t-4 grid grid-cols-3 divide-x-2 divide-black dark:text-gray-200"
         style={{
           borderTopColor: player?.team?.colorScheme?.primary ?? 'gray.500',
         }}
       >
-        <div className="text-center py-1">
+        <div className="py-1 text-center">
           <p className="text-xs font-bold uppercase">Height</p>
           <p className="text-xs">{player.height ?? '---'}</p>
         </div>
-        <div className="text-center py-1">
+        <div className="py-1 text-center">
           <p className="text-xs font-bold uppercase">Weight</p>
           <p className="text-xs">{player.weight ?? '---'}</p>
         </div>
-        <div className="text-center py-1">
+        <div className="py-1 text-center">
           <p className="text-xs font-bold uppercase">Position</p>
           <p className="text-xs">{player.position ?? '---'}</p>
         </div>

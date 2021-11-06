@@ -8,13 +8,13 @@ type TeamsLayout = {
 
 const TeamsLayout = ({ children }: TeamsLayout) => {
   return (
-    <div className="flex flex-col items-center min-h-screen w-screen">
+    <div className="flex flex-col items-center w-screen min-h-screen">
       <Header />
 
       <AnimatePresence>
         <motion.main
           key="main"
-          className="flex flex-col flex-grow items-center justify-center text-black bg-white dark:text-white dark:bg-black my-16"
+          className="flex flex-col items-center justify-center flex-grow my-16 text-black bg-white dark:text-white dark:bg-black"
           animate="enter"
           exit="exit"
           initial="initial"

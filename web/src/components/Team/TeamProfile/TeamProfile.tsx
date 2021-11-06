@@ -12,12 +12,12 @@ const TeamProfile = ({ team }: TeamProfileProps) => {
   const { imageURL: logo } = useCloudinaryImage(`nba/teams/${team.handle}`)
 
   return (
-    <div className="px-8 py-4 bg-gray-200 dark:bg-800 text-center shadow-2xl space-y-8 my-16">
-      <hgroup className="space-y-4 my-8">
-        <h1 className="text-2xl md:text-4xl font-bold tracking-wide">
+    <div className="px-8 py-4 my-16 text-center bg-gray-200 shadow-2xl dark:bg-800 space-y-8">
+      <hgroup className="my-8 space-y-4">
+        <h1 className="text-2xl font-bold tracking-wide md:text-4xl">
           {team.city} {team.name}
         </h1>
-        <h2 className="text-xl md:text-2xl w-full text-gray-500 dark:text-gray-400 font-semibold tracking-tight">
+        <h2 className="w-full text-xl font-semibold tracking-tight text-gray-500 md:text-2xl dark:text-gray-400">
           {team.wins} - {team.losses}
         </h2>
       </hgroup>

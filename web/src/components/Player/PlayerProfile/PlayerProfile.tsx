@@ -13,7 +13,7 @@ const PlayerProfile = ({ player }: PlayerProfileProps) => {
   )
 
   return (
-    <div className="flex flex-col items-center px-8 py-8 bg-gray-200 dark:bg-800 shadow-2xl space-y-8 w-full md:w-144">
+    <div className="flex flex-col items-center w-full px-8 py-8 bg-gray-200 shadow-2xl dark:bg-800 space-y-8 md:w-144">
       <div className="pt-2">
         <img
           src={headshot}
@@ -21,11 +21,11 @@ const PlayerProfile = ({ player }: PlayerProfileProps) => {
           className="object-cover w-96 h-96"
         />
       </div>
-      <hgroup className="space-y-4 my-8 text-center">
-        <h1 className="text-2xl md:text-4xl font-bold tracking-wide">
+      <hgroup className="my-8 text-center space-y-4">
+        <h1 className="text-2xl font-bold tracking-wide md:text-4xl">
           {player.name}
         </h1>
-        <h2 className="text-xl md:text-2xl w-full text-gray-500 dark:text-gray-400 font-semibold tracking-tight">
+        <h2 className="w-full text-xl font-semibold tracking-tight text-gray-500 md:text-2xl dark:text-gray-400">
           #{player.number} | {player.position}
         </h2>
       </hgroup>
@@ -35,7 +35,7 @@ const PlayerProfile = ({ player }: PlayerProfileProps) => {
       >
         {player.team.city} {player.team.name}
       </Link>
-      <div className="flex flex-col space-y-2 w-32">
+      <div className="flex flex-col w-32 space-y-2">
         <p className="inline-flex justify-between">
           <span className="italic">Height:</span>
           <span>{player.height}</span>

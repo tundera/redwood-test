@@ -11,7 +11,7 @@ const Main = ({ children }: MainProps) => {
     <AnimatePresence>
       <motion.main
         key="main"
-        className="flex flex-col flex-grow items-center justify-center min-h-screen text-black bg-white dark:text-white dark:bg-black"
+        className="flex flex-col items-center justify-center flex-grow min-h-screen text-black bg-white dark:text-white dark:bg-black"
         animate="enter"
         exit="exit"
         initial="initial"

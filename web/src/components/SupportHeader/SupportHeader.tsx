@@ -31,7 +31,7 @@ const SupportHeader = () => {
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
           <img
-            className="w-full h-full object-cover"
+            className="object-cover w-full h-full"
             src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
             alt=""
           />
@@ -40,11 +40,11 @@ const SupportHeader = () => {
             aria-hidden="true"
           />
         </div>
-        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <div className="relative px-4 py-24 mx-auto max-w-7xl sm:py-32 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
             Support
           </h1>
-          <p className="mt-6 max-w-3xl text-xl text-gray-300">
+          <p className="max-w-3xl mt-6 text-xl text-gray-300">
             Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
             id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
             fames. Dui, amet, nec sit pulvinar.
@@ -54,7 +54,7 @@ const SupportHeader = () => {
 
       {/* Overlapping cards */}
       <section
-        className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        className="relative z-10 px-4 pb-32 mx-auto -mt-32 max-w-7xl sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"
       >
         <h2 className="sr-only" id="contact-heading">
@@ -64,12 +64,12 @@ const SupportHeader = () => {
           {supportLinks.map((link) => (
             <div
               key={link.name}
-              className="flex flex-col bg-white rounded-2xl shadow-xl"
+              className="flex flex-col bg-white shadow-xl rounded-2xl"
             >
-              <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
-                <div className="absolute top-0 p-5 inline-block bg-indigo-600 rounded-xl shadow-lg transform -translate-y-1/2">
+              <div className="relative flex-1 px-6 pt-16 pb-8 md:px-8">
+                <div className="absolute top-0 inline-block p-5 bg-indigo-600 shadow-lg transform -translate-y-1/2 rounded-xl">
                   <link.icon
-                    className="h-6 w-6 text-white"
+                    className="w-6 h-6 text-white"
                     aria-hidden="true"
                   />
                 </div>
