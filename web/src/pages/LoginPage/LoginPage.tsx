@@ -23,6 +23,7 @@ const LoginPage = () => {
   }, [isAuthenticated])
 
   const usernameRef = useRef<HTMLInputElement>()
+
   useEffect(() => {
     usernameRef.current.focus()
   }, [])
@@ -57,7 +58,13 @@ const LoginPage = () => {
             Sign in to your account
           </h2>
           <p className="mt-2 text-sm text-center text-gray-600">
-            Completely free
+            Don&apos;t have an account?{' '}
+            <Link
+              to={routes.signup()}
+              className="font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Sign up for free
+            </Link>
           </p>
         </div>
 
@@ -70,7 +77,7 @@ const LoginPage = () => {
                   className="block text-sm font-medium text-gray-700"
                   errorClassName="block text-sm font-medium text-red-500"
                 >
-                  Email address
+                  Username
                 </Label>
                 <div className="mt-1">
                   <TextField

@@ -1,7 +1,7 @@
 const features = [
+  { name: 'React', icon: '/logos/react.svg', description: '' },
   { name: 'Prisma', icon: '/logos/prisma.svg', description: '' },
   { name: 'GraphQL', icon: '/logos/graphql.svg', description: '' },
-  { name: 'TypeScript', icon: '/logos/typescript.svg', description: '' },
 ]
 
 const FeaturesGrid = () => {
@@ -12,11 +12,11 @@ const FeaturesGrid = () => {
           Development reimagined
         </h2>
         <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          A React framework that packs a serious punch.
+          Automatic everything.
         </p>
         <p className="mx-auto mt-5 text-xl text-gray-500 max-w-prose">
-          Everything you need to develop, test, and deploy your applications. No
-          configuration required. Code, design, and documentation in one place.
+          Everything you need to develop, test, and deploy full-stack
+          applications.
         </p>
         <div className="mt-12">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -25,10 +25,10 @@ const FeaturesGrid = () => {
                 <div className="flow-root px-6 pb-8 rounded-lg bg-gray-50">
                   <div className="-mt-6">
                     <div>
-                      <span className="inline-flex items-center justify-center p-3 rounded-md md:shadow-lg md:bg-white">
+                      <span className="inline-flex items-center justify-center p-3 rounded-md md:shadow-lg md:bg-white md:bg-opacity-50">
                         <img
                           src={feature.icon}
-                          className="w-24 h-24 text-white"
+                          className="w-32 h-32 text-white"
                           aria-hidden="true"
                           alt={`${feature.name} logo`}
                         />
